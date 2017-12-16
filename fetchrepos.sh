@@ -1,7 +1,7 @@
 #!/bin/bash
 
 YOCTO_BRANCH="rocko"
-YOCTO_LAYERS=("git://git.openembedded.org/meta-openembedded" "https://github.com/meta-qt5/meta-qt5" "git://git.yoctoproject.org/meta-security" "git://git.yoctoproject.org/meta-raspberrypi")
+YOCTO_LAYERS=("git://git.openembedded.org/meta-openembedded" "https://github.com/meta-qt5/meta-qt5" "git://git.yoctoproject.org/meta-security" "git://git.yoctoproject.org/meta-raspberrypi" "https://github.com/navdata-net/meta-navdatanet")
 pushd . >/dev/null
 
 echo "Fetching poky template."
