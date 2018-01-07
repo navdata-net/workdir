@@ -2,7 +2,7 @@
 pushd . >/dev/null
 . ./oe-init-build-env ${1}
 pwd
-bitbake navdatanet-station parted e2fsprogs curl ntp nginx rrdtool pylongps rtklibexplorer
+bitbake navdatanet-station
 bitbake package-index
 popd >/dev/null
 
