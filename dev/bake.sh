@@ -2,9 +2,7 @@
 pushd . >/dev/null
 . ./oe-init-build-env ${1}
 pwd
-bitbake rpi-basic-image
-bitbake rtklibexplorer
-bitbake pylongps
+bitbake navdatanet-station parted ntp nginx rrdtool pylongps rtklibexplorer
 bitbake package-index
 popd >/dev/null
 
