@@ -2,9 +2,11 @@
 pushd . >/dev/null
 . ./oe-init-build-env ${1}
 pwd
-rm -f bitbake-cookerdaemon.log
-rm -rf cache
-rm -rf sstate-cache
-rm -rf tmp
+mkdir todelete
+mv bitbake-cookerdaemon.log todelete/
+mv cache todelete/
+mv sstate-cache todelete/
+mv tmp todelete/
+rm -rf todelete
 popd >/dev/null
 
