@@ -20,8 +20,8 @@ git pull
 echo
 popd >/dev/null
 
-
-for ENV in dev prod ; do
+ENV="${1:-dev}"
+#for ENV in dev prod ; do
   echo "Fetching ${ENV} environment: poky"
   pushd ${ENV} >/dev/null
 
@@ -49,7 +49,7 @@ for ENV in dev prod ; do
     done
 
   popd >/dev/null
-  done
+  #done
 
 popd >/dev/null
 
