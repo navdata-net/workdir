@@ -2,6 +2,7 @@
 
 MYSD="/dev/sdb"
 echo "Make sure ${MYSD} is your SD card first and edit this file accordingly. Doom awaits you if you dont."
+exit 1
 
 CFG="/workdir/config/${1}.tbz"
 [ -f "${CFG}" ] || { echo "Missing config" ; exit 1 ; }
