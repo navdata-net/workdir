@@ -4,12 +4,14 @@ YOCTO_BRANCH="rocko"
 YOCTO_LAYERS=("git://git.openembedded.org/meta-openembedded" "https://github.com/meta-qt5/meta-qt5" "git://git.yoctoproject.org/meta-security" "git://git.yoctoproject.org/meta-raspberrypi" "https://github.com/navdata-net/meta-navdatanet")
 
 PRE_MD5="`md5sum \"${0}\"`"
+echo "Trying selfupdate."
 git pull
 POST_MD5="`md5sum \"${0}\"`"
 [ "${PRE_MD5}" = "${POST_MD5}" ] || {
   echo "${0} was updated. Please rerun."
   exit
   }
+echo
 
 pushd . >/dev/null
 
